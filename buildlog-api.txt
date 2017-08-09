@@ -1,0 +1,53 @@
+--> Deploying to production_node_api environment
+--> on host localhost
+  ○ executing pre-setup `rm -rf node_api`
+  ○ running setup
+  ○ cloning git@bitbucket.org:kv-newssocial/node-api.git
+Cloning into '/home/ec2-user/app/node_api/source'...
+  ○ executing post-setup `npm install`
+
+> dtrace-provider@0.6.0 install /home/ec2-user/app/node_api/source/node_modules/dtrace-provider
+> node scripts/install.js
+
+
+> husky@0.14.2 install /home/ec2-user/app/node_api/source/node_modules/husky
+> node ./bin/install.js
+
+husky
+setting up Git hooks
+done
+
+
+> lint-staged@4.0.0 postinstall /home/ec2-user/app/node_api/source/node_modules/lint-staged
+> echo "🚫💩 lint-staged installed! 
+Do not forget to configure it. See https://github.com/okonet/lint-staged/blob/master/README.md" && exit 0
+
+🚫💩 lint-staged installed! 
+Do not forget to configure it. See https://github.com/okonet/lint-staged/blob/master/README.md
+npm WARN node-api@1.0.0 No repository field.
+npm WARN node-api@1.0.0 No license field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 677 packages in 11.445s
+  ○ setup complete
+--> Success
+[PM2] Applying action deleteProcessId on app [api](ids: 10)
+[PM2] [api](10) ✓
+┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
+│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem       │ user │ watching │
+├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼───────────┼──────┼──────────┤
+│ admin    │ 5  │ fork │ 3413 │ online │ 0       │ 74m    │ 0%  │ 71.5 MB   │ root │ disabled │
+│ app      │ 8  │ fork │ 8651 │ online │ 0       │ 34m    │ 0%  │ 62.9 MB   │ root │ disabled │
+└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
+[PM2] Starting /var/www/app/node_api/source/index.js in fork_mode (1 instance)
+[PM2] Done.
+┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
+│ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem       │ user │ watching │
+├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼───────────┼──────┼──────────┤
+│ admin    │ 5  │ fork │ 3413  │ online │ 0       │ 74m    │ 0%  │ 71.5 MB   │ root │ disabled │
+│ api      │ 11 │ fork │ 12030 │ online │ 0       │ 0s     │ 0%  │ 15.4 MB   │ root │ disabled │
+│ app      │ 8  │ fork │ 8651  │ online │ 0       │ 34m    │ 0%  │ 62.9 MB   │ root │ disabled │
+└──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
+ Use `pm2 show <id|name>` to get more details about an app
