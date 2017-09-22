@@ -6,6 +6,14 @@
 Cloning into '/home/ec2-user/app/node_api/source'...
   ○ executing post-setup `npm install`
 
+> typechecker@2.0.8 preinstall /home/ec2-user/app/node_api/source/node_modules/extract-opts/node_modules/typechecker
+> node ./cyclic.js
+
+
+> typechecker@2.0.8 preinstall /home/ec2-user/app/node_api/source/node_modules/extendr/node_modules/typechecker
+> node ./cyclic.js
+
+
 > dtrace-provider@0.6.0 install /home/ec2-user/app/node_api/source/node_modules/dtrace-provider
 > node scripts/install.js
 
@@ -29,25 +37,25 @@ npm WARN node-api@1.0.0 No license field.
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules/fsevents):
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
 
-added 677 packages in 11.445s
+added 754 packages in 14.694s
   ○ setup complete
 --> Success
-[PM2] Applying action deleteProcessId on app [api](ids: 10)
-[PM2] [api](10) ✓
-┌──────────┬────┬──────┬──────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
-│ App name │ id │ mode │ pid  │ status │ restart │ uptime │ cpu │ mem       │ user │ watching │
-├──────────┼────┼──────┼──────┼────────┼─────────┼────────┼─────┼───────────┼──────┼──────────┤
-│ admin    │ 5  │ fork │ 3413 │ online │ 0       │ 74m    │ 0%  │ 71.5 MB   │ root │ disabled │
-│ app      │ 8  │ fork │ 8651 │ online │ 0       │ 34m    │ 0%  │ 62.9 MB   │ root │ disabled │
-└──────────┴────┴──────┴──────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
+[PM2] Applying action deleteProcessId on app [api](ids: 5)
+[PM2] [api](5) ✓
+┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬──────┬──────────┐
+│ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user │ watching │
+├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼──────┼──────────┤
+│ admin    │ 3  │ fork │ 12335 │ online │ 0       │ 5D     │ 0%  │ 78.0 MB    │ root │ disabled │
+│ app      │ 4  │ fork │ 19623 │ online │ 0       │ 5D     │ 0%  │ 107.6 MB   │ root │ disabled │
+└──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴──────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
 [PM2] Starting /var/www/app/node_api/source/index.js in fork_mode (1 instance)
 [PM2] Done.
-┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬───────────┬──────┬──────────┐
-│ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem       │ user │ watching │
-├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼───────────┼──────┼──────────┤
-│ admin    │ 5  │ fork │ 3413  │ online │ 0       │ 74m    │ 0%  │ 71.5 MB   │ root │ disabled │
-│ api      │ 11 │ fork │ 12030 │ online │ 0       │ 0s     │ 0%  │ 15.4 MB   │ root │ disabled │
-│ app      │ 8  │ fork │ 8651  │ online │ 0       │ 34m    │ 0%  │ 62.9 MB   │ root │ disabled │
-└──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴───────────┴──────┴──────────┘
+┌──────────┬────┬──────┬───────┬────────┬─────────┬────────┬─────┬────────────┬──────┬──────────┐
+│ App name │ id │ mode │ pid   │ status │ restart │ uptime │ cpu │ mem        │ user │ watching │
+├──────────┼────┼──────┼───────┼────────┼─────────┼────────┼─────┼────────────┼──────┼──────────┤
+│ admin    │ 3  │ fork │ 12335 │ online │ 0       │ 5D     │ 0%  │ 78.0 MB    │ root │ disabled │
+│ api      │ 6  │ fork │ 2343  │ online │ 0       │ 0s     │ 0%  │ 15.4 MB    │ root │ disabled │
+│ app      │ 4  │ fork │ 19623 │ online │ 0       │ 5D     │ 0%  │ 107.6 MB   │ root │ disabled │
+└──────────┴────┴──────┴───────┴────────┴─────────┴────────┴─────┴────────────┴──────┴──────────┘
  Use `pm2 show <id|name>` to get more details about an app
